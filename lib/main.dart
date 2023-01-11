@@ -2,6 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:test_flutter/pages/choose_topic_page.dart';
+import 'package:test_flutter/pages/reminders_page.dart';
 import 'package:test_flutter/pages/started_page.dart';
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ChooseTopicPage(),
+      home: const RemindersPage(),
     );
   }
 }
