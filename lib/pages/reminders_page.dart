@@ -26,19 +26,19 @@ class _RemindersPageState extends State<RemindersPage> {
                   "What time would you\n like to meditate?",
                   style: PrimaryFont.medium(24),
                 ),
-                const SizedBox(height: 15,),
+                const SizedBox(
+                  height: 15,
+                ),
                 Text(
                     "Any time you can choose but We recommend\nfirst thing in th morning.",
-                    style: PrimaryFont.light(16)
-                ),
+                    style: PrimaryFont.light(16)),
                 const SizedBox(
                   height: 40,
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: kColorLightGrey
-                  ),
+                      borderRadius: BorderRadius.circular(20),
+                      color: kColorLightGrey),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -55,7 +55,9 @@ class _RemindersPageState extends State<RemindersPage> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 40,),
+                const SizedBox(
+                  height: 40,
+                ),
                 Text("Which day would you\nlike to meditate?",
                     style: PrimaryFont.medium(24)),
                 const SizedBox(
@@ -72,43 +74,64 @@ class _RemindersPageState extends State<RemindersPage> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: const [
-                      _Day(dayName: "SU",),
-                      _Day(dayName: "M",),
-                      _Day(dayName: "T",),
-                      _Day(dayName: "W",),
-                      _Day(dayName: "TH",),
-                      _Day(dayName: "F",),
-                      _Day(dayName: "S",),
+                      _Day(
+                        dayName: "SU",
+                      ),
+                      _Day(
+                        dayName: "M",
+                      ),
+                      _Day(
+                        dayName: "T",
+                      ),
+                      _Day(
+                        dayName: "W",
+                      ),
+                      _Day(
+                        dayName: "TH",
+                      ),
+                      _Day(
+                        dayName: "F",
+                      ),
+                      _Day(
+                        dayName: "S",
+                      ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 20,
+                ),
                 Container(
                   height: 64,
                   width: double.maxFinite,
                   decoration: BoxDecoration(
-                    color: kColorPrimary,
-                    borderRadius: BorderRadius.circular(38)
-                  ),
+                      color: kColorPrimary,
+                      borderRadius: BorderRadius.circular(38)),
                   child: Center(
                     child: Text(
                       "SAVE",
-                      style: PrimaryFont.medium(18).copyWith(color: Colors.white),
+                      style:
+                          PrimaryFont.medium(18).copyWith(color: Colors.white),
                     ),
                   ),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 20,
+                ),
                 Align(
                   alignment: Alignment.center,
                   child: TextButton(
                     onPressed: () {},
                     child: Text(
                       "NO THANKS",
-                      style: PrimaryFont.medium(18).copyWith(color: kColorDarkGrey),
+                      style: PrimaryFont.medium(18)
+                          .copyWith(color: kColorDarkGrey),
                     ),
                   ),
                 ),
-                const SizedBox(height: 20,)
+                const SizedBox(
+                  height: 20,
+                )
               ],
             ),
           ),
@@ -131,12 +154,9 @@ class _Day extends StatelessWidget {
         height: 40,
         width: 40,
         decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: Colors.transparent,
-           border: Border.all(
-             color: const Color(0xffa1a4b2)
-           )
-        ),
+            shape: BoxShape.circle,
+            color: Colors.transparent,
+            border: Border.all(color: const Color(0xffa1a4b2))),
         child: Center(
           child: Text(
             dayName,
@@ -147,4 +167,3 @@ class _Day extends StatelessWidget {
     );
   }
 }
-

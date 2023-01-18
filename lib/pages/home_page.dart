@@ -33,7 +33,6 @@ class RecommendedMusicData {
   RecommendedMusicData(this.image, this.title, this.subtext);
 }
 
-
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -78,18 +77,20 @@ class HomePage extends StatelessWidget {
                   height: 20,
                 ),
                 _PlayMusicCard(),
-                SizedBox(height: 30,),
-
+                SizedBox(
+                  height: 30,
+                ),
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     "Recommended for your",
-                    style: PrimaryFont.medium(22).copyWith(color: kColorDarkGrey),
+                    style:
+                        PrimaryFont.medium(22).copyWith(color: kColorDarkGrey),
                   ),
                 ),
-
-                SizedBox(height: 20,),
-
+                SizedBox(
+                  height: 20,
+                ),
                 SingleChildScrollView(
                   physics: BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
@@ -102,7 +103,7 @@ class HomePage extends StatelessWidget {
                           subtitle: e.subtext,
                           imagePath: e.image,
                         ),
-                    );
+                      );
                     }).toList(),
                   ),
                 ),
@@ -116,7 +117,12 @@ class HomePage extends StatelessWidget {
 }
 
 class _HomeRecommendedWidget extends StatelessWidget {
-  const _HomeRecommendedWidget({Key? key, required this.title, required this.subtitle, required this.imagePath}) : super(key: key);
+  const _HomeRecommendedWidget(
+      {Key? key,
+      required this.title,
+      required this.subtitle,
+      required this.imagePath})
+      : super(key: key);
 
   final String title;
   final String subtitle;
@@ -140,14 +146,19 @@ class _HomeRecommendedWidget extends StatelessWidget {
               ),
             ),
           ),
-          Text(title, style: PrimaryFont.medium(12).copyWith(color: kColorDarkGrey),),
-          Text(subtitle, style: PrimaryFont.medium(10).copyWith(color: kColorLightGrey),),
+          Text(
+            title,
+            style: PrimaryFont.medium(12).copyWith(color: kColorDarkGrey),
+          ),
+          Text(
+            subtitle,
+            style: PrimaryFont.medium(10).copyWith(color: kColorLightGrey),
+          ),
         ],
       ),
     );
   }
 }
-
 
 class _PlayMusicCard extends StatelessWidget {
   const _PlayMusicCard({Key? key}) : super(key: key);
@@ -158,11 +169,9 @@ class _PlayMusicCard extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-        image: const DecorationImage(
-          image: AssetImage("assets/images/play_music_bg.png"),
-          fit: BoxFit.cover
-        )
-      ),
+          image: const DecorationImage(
+              image: AssetImage("assets/images/play_music_bg.png"),
+              fit: BoxFit.cover)),
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Row(
